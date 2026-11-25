@@ -1,0 +1,149 @@
+Create a fully working JARVIS-style AI assistant for macOS, and make the entire project using Terminal commands wherever possible.
+
+I want you to actually build the application for me, not just explain how to build it.
+
+PROJECT NAME:
+JarvisMac
+
+GOAL:
+Create a desktop AI assistant inspired by JARVIS from Iron Man. It should be a real macOS application that can listen through the Mac microphone, understand voice commands, speak responses with a natural JARVIS-style voice, and perform useful Mac actions.
+
+IMPORTANT:
+- Target macOS.
+- Use Swift/SwiftUI and Xcode where appropriate.
+- Build the project from Terminal.
+- Give me commands that create the necessary files and folders automatically.
+- Do NOT make me manually create every file.
+- The final project must compile with xcodebuild.
+- Do not use fake buttons that don't actually work.
+- Do not use placeholder functionality when a real macOS API can accomplish the feature.
+- Keep everything organized inside ~/Downloads/JarvisMac.
+- Automatically create/overwrite the required source files with Terminal commands.
+- At the end, build the application and tell me exactly where the .app is located.
+VOICE:
+- Use the Mac microphone for speech recognition.
+- Ask for microphone permission properly.
+- Use macOS Speech framework for speech recognition where possible.
+- Use AVFoundation for microphone/audio handling.
+- Use AVSpeechSynthesizer for spoken responses.
+- Give the assistant a deep, calm, futuristic JARVIS-like voice using Apple's available voices/settings.
+- It should actually speak responses aloud.
+- It should continuously listen when listening mode is enabled.
+- Include a wake-word style activation such as "Hey Jarvis" if realistically possible without requiring an external paid service.
+- If true background wake-word detection isn't practical using Apple's built-in APIs, implement a reliable push-to-talk/continuous listening fallback instead of pretending it works.
+COMMANDS:
+Support useful voice commands such as:
+- "Hey Jarvis"
+- "What time is it?"
+- "What's today's date?"
+- "Open Safari"
+- "Open Discord"
+- "Open YouTube"
+- "Open Messages"
+- "Open System Settings"
+- "Search the web for ..."
+- "Go to ..."
+- "Play ..."
+- "Set a timer for ..."
+- "Set an alarm for ..."
+- "Tell me a joke"
+- "What's the weather?"
+- "Search for ..."
+- "Close Safari"
+- "Quit Discord"
+- "Take a screenshot"
+- "Show my Downloads folder"
+- "Lock my Mac"
+- "Sleep my Mac"
+For potentially destructive or sensitive actions, require confirmation before executing them.
+
+MAC CONTROL:
+Use legitimate macOS APIs and AppleScript/osascript where appropriate for actions such as opening applications, controlling supported applications, navigating to URLs, taking screenshots, and interacting with system features.
+
+Do NOT use malware, persistence mechanisms, credential stealing, keylogging, hidden surveillance, or anything designed to bypass macOS security.
+
+AI:
+Create a clean architecture so an AI provider can be connected later.
+
+Include a configuration section where I can add an API key if I want to connect an AI model.
+
+The assistant should still have useful built-in commands even without an API key.
+
+UI:
+Create a futuristic JARVIS-style interface with:
+- Dark/black background
+- Blue/cyan glowing accents
+- Large circular/arc-style assistant visualization
+- Animated listening indicator
+- "JARVIS" title
+- Microphone status
+- Current command/status text
+- Conversation transcript
+- Start/Stop Listening button
+- Settings button
+- Clear conversation button
+- Minimize/close controls
+- Smooth animations
+- Responsive macOS window
+Make the interface look professional rather than like a basic Swift tutorial.
+
+PROJECT STRUCTURE:
+Create a proper Xcode project called JarvisMac.
+
+Include:
+- JarvisMacApp.swift
+- ContentView.swift
+- SpeechManager.swift
+- VoiceManager.swift
+- CommandManager.swift
+- MacControlManager.swift
+- AIManager.swift
+- SettingsManager.swift
+- Any other files required
+PERMISSIONS:
+Configure the app's Info.plist/project settings for:
+- Microphone access
+- Speech recognition access
+Use appropriate permission descriptions such as:
+"Jarvis needs microphone access to hear your voice commands."
+
+BUILDING:
+Use Terminal to:
+1. Create ~/Downloads/JarvisMac
+2. Create the Xcode project and source files
+3. Configure the project
+4. Build it using xcodebuild
+5. Fix compilation errors automatically if possible
+6. Build a Debug .app
+7. Tell me the exact path to the finished application.
+Use commands similar to:
+
+cd ~/Downloads
+mkdir -p JarvisMac
+cd JarvisMac
+
+Then generate the complete project.
+
+After generating everything, run:
+
+xcodebuild -project JarvisMac.xcodeproj -scheme JarvisMac -configuration Debug build
+
+If the build fails:
+- Read the compiler errors.
+- Fix the source files.
+- Run the build again.
+- Continue until the project successfully builds.
+Finally, locate the application and provide the exact command I can use to launch it, for example:
+
+open ~/Downloads/JarvisMac/build/Debug/JarvisMac.app
+
+Also provide a command to launch the app directly from Terminal.
+
+MOST IMPORTANT:
+I want you to actually generate the project through Terminal commands. Do not simply give me a tutorial telling me how to manually create the files.
+
+When you give me commands, make them copy/paste friendly for macOS Terminal.
+
+If a command is too large, split it into clearly labeled blocks that can be pasted one after another.
+
+At the end, verify the build succeeded and tell me what command to run to launch JARVIS.
